@@ -80,4 +80,4 @@ async def Help(ctx):
     await ctx.send(f'/Commands')
     await ctx.send(f'/Help')
 
-bot.run("MTE0NDMyODM0NzEyNDUxNDgzNw.G8IKKV.pjwu7xqwWEpVPqYmObhCMY-uRG1ALJ4PCHgEh8")
+bot.run("")
