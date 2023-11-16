@@ -5,16 +5,23 @@ from commands import *
 
 intents = discord.Intents.default()
 intents.message_content = True
+import discord
+import os
+from discord.ext import commands
+from commands import *
+
+intents = discord.Intents.default()
+intents.message_content = True
 
 bot = commands.Bot(command_prefix='/', intents=intents)
 
 @bot.event
 async def on_ready():
-    print(f'We have logged as {bot.user}')
+    print(f'We have logged as FBC')
 
 @bot.command()
 async def Hello(ctx):
-    await ctx.send(f'Hello {bot.user}! I hack you!')
+    await ctx.send(f'Hello FBC! I hack you!')
 
 @bot.command()
 async def He(ctx, count_he = 3):
@@ -22,11 +29,11 @@ async def He(ctx, count_he = 3):
 
 @bot.command()
 async def Bye(ctx):
-    await ctx.send(f'Bye {bot.user}:wave:! I hack you!')
+    await ctx.send(f'Bye FBC:wave:! I hack you!')
 
 @bot.command()
 async def Commands(ctx):
-    await ctx.send(f'Say /Help to see commands {bot.user}!')
+    await ctx.send(f'Say /Help to see commands FBC!')
 
 @bot.command()
 async def Emoji(ctx):
@@ -77,7 +84,10 @@ async def Help(ctx):
     await ctx.send(f'/YazıTura Yazı')
 #    await ctx.send(f'/MakePassword 30')
     await ctx.send(f'/Secret 1, 2')
+    await ctx.send(f'/Bruh')
+    await ctx.send(f'/AmongUs')
+    await ctx.send(f'/Joke')
     await ctx.send(f'/Commands')
     await ctx.send(f'/Help')
 
-bot.run("")
+bot.run("Token")
